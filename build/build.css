@@ -1,19 +1,244 @@
-.footer {
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  position: relative;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.header {
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Loading.
+ */
+
+.initial-header > a {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.loading .logo {
+  -webkit-animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
+  animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+
+@-webkit-keyframes animInitialHeader {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 800px, 0);
+    transform: translate3d(0, 800px, 0);
+  }
+}
+
+@keyframes animInitialHeader {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 800px, 0);
+    transform: translate3d(0, 800px, 0);
+  }
+}
+
+/**
+ * Loaded
+ */
+
+.loaded .initial-header > a {
+  opacity: 1;
+}
+
+.loaded .logo {
+  opacity: 1;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  -webkit-transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s;
+  color: #fff;
+}
+
+.loaded .initial-header {
+  -webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLogo {
+  to {
+    -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+    transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+  }
+}
+
+@keyframes animLoadedLogo {
+  to {
+    -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+    transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+  }
+}
+
+@-webkit-keyframes animLoadedHeader {
+  to {
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+}
+
+@keyframes animLoadedHeader {
+  to {
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+}
+
+/**
+ * Header.
+ */
+
+.initial-header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+}
+
+.initial-header > h1 {
+  -webkit-transition: color .5s ease-out !important;
+  transition: color .5s ease-out !important;
+}
+
+.link-header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,6 +247,35 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+/**
+ * Logo.
+ */
+
+.logo {
+  top: 0;
+  margin: 0 auto;
+  height: 100%;
+  min-width: 320px;
+  max-width: 480px;
+  display: block;
+  font-size: 120px;
+  -webkit-transform: translate3d(0,25%,0);
+  transform: translate3d(0,25%,0);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: default;
+  pointer-events: none;
+  color: #ef6e7e;
+}
+
+body {
+  background-color: rgba(130, 201, 172, 1);
 }
 
 .body-section {
@@ -42,9 +296,11 @@
 
 html,
 body,
-p {
+p,
+a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: white;
 }
 
 h1,
@@ -52,6 +308,37 @@ h2,
 h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  color: white;
+}
+
+.footer {
+  max-width: 320px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer a {
+  font-size: 18px;
+}
+
+.footer-link {
+  display: inline-block;
+  width: 50%;
+}
+
+.footer-date {
+  display: inline-block;
+  width: 100%;
 }
 
 /**
@@ -68,15 +355,25 @@ h3 {
  */
 
 .player-play {
-  width: 32px;
-  height: 32px;
+  width: 100%;
+  height: 140px;
+  margin-top: 32px;
   text-align: center;
-  color: black;
+  color: white;
 }
 
 /**
  * Playlist
  */
+
+.section-playlist {
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: white;
+}
 
 .song {
   width: 100%;
@@ -89,22 +386,32 @@ h3 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+  cursor: pointer;
+}
+
+.song:hover {
+  color: hsl(0, 0%, 60%);
 }
 
 .song-name {
   left: 0;
   display: inline-block;
   position: relative;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .song-duration {
   right: 0;
+  padding-left: 10px;
+  width: 36px;
   display: inline-block;
   position: relative;
-}
-
-.gork {
-  font-size: 100px;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 32px;
+  border-left: 3px;
+  border-style: solid;
+  border-color: white;
 }

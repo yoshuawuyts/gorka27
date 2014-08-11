@@ -3,7 +3,8 @@
  */
 
 var react = require('react');
-var songs = require('../../../content/songs.json');
+var fs = require('fs');
+var logo = fs.readFileSync(__dirname + '/playbutton.svg', 'utf8');
 var dom = react.DOM;
 
 /**
@@ -28,18 +29,9 @@ function render() {
     src: 'http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg'
   };
 
-  var svg = {
-    className: 'player-play', 
-    xmlns: 'http://www.w3.org/2000/svg', 
-    viewBox: '0 0 64 64'
-  };
-
   return dom.section({className: 'section-player'},
     dom.audio(audio, 'your browser does shit'),
-    dom.svg(svg,
-      dom.circle({cx: 32, cy: 32, r: 32}),
-      dom.path({x: 16, y: 16, d: 'M0 0 L32 16 L0 32 z'})
-    ),
+    dom.div({dangerouslySetInnerHTML: {__html: logo}}),
     dom.div({className: 'player-progress'})
   );
 }
@@ -49,5 +41,5 @@ function render() {
  */
 
 function componentDidMount() {
-  var audio = this.refs.audio.getDOMNode();
+  //var audio = this.refs.audio.getDOMNode();
 }

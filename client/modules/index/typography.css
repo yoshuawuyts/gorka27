@@ -8,12 +8,14 @@
  * Base font.
  */
 
-html, body, p {
+html, body, p, a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: var(--color-text-body);
 }
 
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  color: var(--color-text-headings);
 }

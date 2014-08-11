@@ -7,7 +7,6 @@ var playlist = require('../modules/player/playlist');
 var player = require('../modules/player/player');
 var header = require('../modules/header/header');
 var footer = require('../modules/footer/footer');
-var title = require('../modules/title/title');
 var dom = react.DOM;
 
 /**
@@ -16,21 +15,39 @@ var dom = react.DOM;
 
 module.exports = react.createClass({
   displayName: 'home',
-  render: render
+  componentWillMount: componentWillMount,
+  render: render,
+  componentDidMount: componentDidMount
 });
+
+/**
+ * Component will mount.
+ */
+
+function componentWillMount() {
+  this.setState({load: 'loading'});
+}
 
 /**
  * Render.
  */
 
 function render() {
-  return dom.section({className: 'root-section'}, 
+  console.log(this.state);
+  return dom.section({className: this.state.load + ' root-section'},
     header(),
     dom.section({className: 'body-section'},
-      title(),
       player(),
       playlist(),
       footer()
     )
   );
+}
+
+/**
+ * Component did mount.
+ */
+
+function componentDidMount() {
+  setTimeout(this.setState.bind(this, {load: 'loaded'}), 1500);
 }

@@ -20,7 +20,12 @@ module.exports = react.createClass({
 
 function render() {
   return dom.section({className: 'footer'},
-    dom.a(null, 'facebook'),
-    dom.a(null, 'bookings')
-  )
+    dom.div({className: 'footer-link'},
+      dom.a({href: 'http://facebook.com/gorka27'}, 'facebook')
+    ),
+    dom.div({className: 'footer-link'},
+      dom.a({href: '/bookings'}, 'bookings')
+    ),
+    dom.div({className: 'footer-date'}, 'MMXIV')
+  );
 }

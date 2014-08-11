@@ -28,7 +28,7 @@ module.exports = gulp;
 gulp.task('styles', function() {
   gulp
     .src([
-      'client/modules/index/reset.css', 
+      'client/modules/index/reset.css',
       'client/modules/index/vars.css',
       'client/modules/**/*.css'
     ])
@@ -43,6 +43,7 @@ gulp.task('styles', function() {
 
 gulp.task('modules', function() {
   browserify(path.join(__dirname, '/client/modules/index/index.js'))
+    .transform('brfs')
     .bundle()
     .pipe(source('build.js'))
     .pipe(gulp.dest(path.join(__dirname, '/build/')));

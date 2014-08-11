@@ -1,0 +1,51 @@
+/**
+ * Loading.
+ */
+
+.initial-header > a {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.loading .logo {
+  animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+
+@keyframes animInitialHeader {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 800px, 0);
+  }
+}
+
+/**
+ * Loaded
+ */
+
+.loaded .initial-header > a {
+  opacity: 1;
+}
+
+.loaded .logo {
+  opacity: 1;
+  transform-origin: 50% 0;
+  animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  transition: all 0.5s ease 0.3s;
+  color: #fff;
+}
+
+.loaded .initial-header {
+    animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@keyframes animLoadedLogo {
+  to {
+    transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1);
+  }
+}
+
+@keyframes animLoadedHeader {
+    to {
+      transform: translate3d(0,-100%,0);
+    }
+}

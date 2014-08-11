@@ -15,6 +15,7 @@
   "author": "Yoshua Wuyts <i@yoshuawuyts.com>",
   "license": "MIT",
   "devDependencies": {
+    "brfs": "^1.2.0",
     "browserify": "^5.9.1",
     "coveralls": "^2.10.0",
     "gulp": "^3.8.7",

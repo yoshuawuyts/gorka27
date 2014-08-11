@@ -1,8 +1,23 @@
 .footer {
   max-width: 320px;
-  margin-left: auto;
+  margin-top: 32px;
   margin-right: auto;
+  margin-left: auto;
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+
+.footer a {
+  font-size: 18px;
+}
+
+.footer-link {
+  display: inline-block;
+  width: 50%
+}
+
+.footer-date {
+  display: inline-block;
+  width: 100%;
 }
