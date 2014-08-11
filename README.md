@@ -1,19 +1,9 @@
-# gork
-[![NPM version][npm-image]][npm-url] 
-[![build status][travis-image]][travis-url] 
-[![Test coverage][coveralls-image]][coveralls-url]
+# gorka27
+The website for the Gork A27. Wonderful, trippy music made by good friend Tim
+and his band.
 
-## Installation
-```bash
-$ npm i --save gork
-```
-## Overview
-```js
-```
-
-## API
-```js
-```
+## Links
+- [Page preloading effect (codrops)](http://tympanus.net/codrops/2014/08/05/page-preloading-effect/)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license) © [Yoshua Wuyts](yoshuawuyts.com)
