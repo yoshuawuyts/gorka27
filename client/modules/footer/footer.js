@@ -23,9 +23,9 @@ function render() {
     dom.div({className: 'footer-link'},
       dom.a({href: 'http://facebook.com/gorka27'}, 'facebook')
     ),
+    dom.div({className: 'footer-date'}, 'MMXIV'),
     dom.div({className: 'footer-link'},
       dom.a({href: '/bookings'}, 'bookings')
-    ),
-    dom.div({className: 'footer-date'}, 'MMXIV')
+    )
   );
 }

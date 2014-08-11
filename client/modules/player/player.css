@@ -14,9 +14,17 @@
 .player-play {
   width: 100%;
   height: 140px;
-  margin-top: 32px;
+  margin-top: 190px;
   text-align: center;
   color: var(--color-player-detail);
+}
+
+.player-play circle {
+  fill: white;
+}
+
+.player-play path {
+  fill: var(--color-background);
 }
 
 /**

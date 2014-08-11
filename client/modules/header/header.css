@@ -12,6 +12,7 @@
   background: #f1f1f1;
 }
 
+/* TODO: remove important tag*/
 .initial-header > h1 {
   transition: color .5s ease-out !important;
 }
