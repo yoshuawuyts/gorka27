@@ -1,0 +1,30 @@
+/**
+ * Loaded
+ */
+
+.loaded .section-playlist,
+.loaded .player-play {
+  transform-origin: 50% 0;
+  animation-delay: 3s;
+  transition: all 0.25s ease 0.3s;
+}
+
+.loaded .section-playlist {
+  animation: animLoadedPlaylist 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+.loaded .player-play {
+  animation: animLoadedPlayer 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@keyframes animLoadedPlaylist {
+  from {
+    transform: translate3d(0, 150%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+@keyframes animLoadedPlayer {
+  from {
+    transform: translate3d(0, 125%, 0) scale3d(0.55, 0.55, 0);
+  }
+}

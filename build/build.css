@@ -135,6 +135,34 @@ table {
   border-spacing: 0;
 }
 
+/**
+ * Loaded
+ */
+
+.loaded .footer {
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: all 0.25s ease 0.3s;
+  transition: all 0.25s ease 0.3s;
+  -webkit-animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedFooter {
+  from {
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+@keyframes animLoadedFooter {
+  from {
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
 .footer {
   width: 320px;
   margin-top: 32px;
@@ -348,6 +376,59 @@ h3 {
 }
 
 /**
+ * Loaded
+ */
+
+.loaded .section-playlist,
+.loaded .player-play {
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-transition: all 0.25s ease 0.3s;
+  transition: all 0.25s ease 0.3s;
+}
+
+.loaded .section-playlist {
+  -webkit-animation: animLoadedPlaylist 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedPlaylist 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+.loaded .player-play {
+  -webkit-animation: animLoadedPlayer 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedPlayer 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedPlaylist {
+  from {
+    -webkit-transform: translate3d(0, 150%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 150%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+@keyframes animLoadedPlaylist {
+  from {
+    -webkit-transform: translate3d(0, 150%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 150%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+@-webkit-keyframes animLoadedPlayer {
+  from {
+    -webkit-transform: translate3d(0, 125%, 0) scale3d(0.55, 0.55, 0);
+    transform: translate3d(0, 125%, 0) scale3d(0.55, 0.55, 0);
+  }
+}
+
+@keyframes animLoadedPlayer {
+  from {
+    -webkit-transform: translate3d(0, 125%, 0) scale3d(0.55, 0.55, 0);
+    transform: translate3d(0, 125%, 0) scale3d(0.55, 0.55, 0);
+  }
+}
+
+/**
  * Player
  */
 
@@ -387,6 +468,13 @@ h3 {
   border-width: 3px;
   border-style: solid;
   border-color: hsla(50, 100%, 81%, 1);
+}
+
+@media all and (max-width: 640px) {
+  .section-playlist {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
 
 .song {

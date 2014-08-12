@@ -40,6 +40,13 @@
   border-color: var(--color-player-detail);
 }
 
+@media all and (max-width: 640px) {
+  .section-playlist {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
 .song {
   width: 100%;
   position: relative;
