@@ -136,6 +136,57 @@ table {
 }
 
 /**
+ * Loaded
+ */
+
+.loaded .footer {
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: all 0.25s ease 0.3s;
+  transition: all 0.25s ease 0.3s;
+  -webkit-animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedFooter {
+  from {
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+@keyframes animLoadedFooter {
+  from {
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
+  }
+}
+
+.footer {
+  width: 320px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer-link,
+.footer-date {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+}
+
+/**
  * Loading.
  */
 
@@ -284,57 +335,6 @@ table {
 
 .loaded .initial-header > a {
   opacity: 1;
-}
-
-/**
- * Loaded
- */
-
-.loaded .footer {
-  -webkit-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition: all 0.25s ease 0.3s;
-  transition: all 0.25s ease 0.3s;
-  -webkit-animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
-  animation: animLoadedFooter 1s cubic-bezier(0.7,0,0.3,1) forwards;
-}
-
-@-webkit-keyframes animLoadedFooter {
-  from {
-    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
-    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
-  }
-}
-
-@keyframes animLoadedFooter {
-  from {
-    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
-    transform: translate3d(0, 500%, 0) scale3d(0.85, 0.85, 0);
-  }
-}
-
-.footer {
-  width: 320px;
-  margin-top: 32px;
-  margin-right: auto;
-  margin-left: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  position: relative;
-}
-
-.footer-link,
-.footer-date {
-  display: inline-block;
-  text-align: center;
-  font-size: 24px;
 }
 
 body {

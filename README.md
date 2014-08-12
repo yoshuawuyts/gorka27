@@ -5,6 +5,12 @@ and his band.
 ## Links
 - [Page preloading effect (codrops)](http://tympanus.net/codrops/2014/08/05/page-preloading-effect/)
 
+## Development
+Enable debug mode in the browser console:
+```js
+localStorage.debug = '*'
+```
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license) © [Yoshua Wuyts](yoshuawuyts.com)
 
