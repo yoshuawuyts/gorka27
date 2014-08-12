@@ -168,6 +168,13 @@ table {
   transition: opacity 0.3s ease-out;
 }
 
+/* TODO: remove important tag*/
+
+.initial-header > h1 {
+  -webkit-transition: all .5s ease-out !important;
+  transition: all .5s ease-out !important;
+}
+
 .loading .logo {
   -webkit-animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
   animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
@@ -193,12 +200,7 @@ table {
  * Loaded
  */
 
-.loaded .initial-header > a {
-  opacity: 1;
-}
-
 .loaded .logo {
-  opacity: 1;
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   transform-origin: 50% 0;
@@ -206,7 +208,6 @@ table {
   animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
   -webkit-transition: all 0.5s ease 0.3s;
   transition: all 0.5s ease 0.3s;
-  color: #fff;
 }
 
 .loaded .initial-header {
@@ -256,11 +257,10 @@ table {
   background: #f1f1f1;
 }
 
-/* TODO: remove important tag*/
-
-.initial-header > h1 {
-  -webkit-transition: color .5s ease-out !important;
-  transition: color .5s ease-out !important;
+.initial-header > a {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .link-header {
@@ -299,8 +299,18 @@ table {
   color: #ef6e7e;
 }
 
+.loaded .logo {
+  opacity: 1;
+  font-size: 98px;
+  color: hsla(50, 100%, 81%, 1);
+}
+
+.loaded .initial-header > a {
+  opacity: 1;
+}
+
 body {
-  background-color: rgba(130, 201, 172, 1);
+  background-color: hsla(155, 40%, 65%, 1);
 }
 
 .body-section {
@@ -326,7 +336,7 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   text-decoration: none;
-  color: white;
+  color: hsla(50, 100%, 81%, 1);
 }
 
 h1,
@@ -334,7 +344,7 @@ h2,
 h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: white;
+  color: hsla(50, 100%, 81%, 1);
 }
 
 /**
@@ -355,7 +365,7 @@ h3 {
   height: 140px;
   margin-top: 190px;
   text-align: center;
-  color: white;
+  color: hsla(50, 100%, 81%, 1);
 }
 
 .player-play circle {
@@ -363,7 +373,7 @@ h3 {
 }
 
 .player-play path {
-  fill: rgba(130, 201, 172, 1);
+  fill: hsla(155, 40%, 65%, 1);
 }
 
 /**
@@ -376,7 +386,7 @@ h3 {
   padding-left: 20px;
   border-width: 3px;
   border-style: solid;
-  border-color: white;
+  border-color: hsla(50, 100%, 81%, 1);
 }
 
 .song {
@@ -396,7 +406,7 @@ h3 {
 }
 
 .song:hover {
-  color: hsl(0, 0%, 60%);
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 .song-name {
@@ -417,5 +427,5 @@ h3 {
   line-height: 32px;
   border-left: 3px;
   border-style: solid;
-  border-color: white;
+  border-color: hsla(50, 100%, 81%, 1);
 }

@@ -7,6 +7,11 @@
   transition: opacity 0.3s ease-out;
 }
 
+/* TODO: remove important tag*/
+.initial-header > h1 {
+  transition: all .5s ease-out !important;
+}
+
 .loading .logo {
   animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
 }
@@ -22,16 +27,10 @@
  * Loaded
  */
 
-.loaded .initial-header > a {
-  opacity: 1;
-}
-
 .loaded .logo {
-  opacity: 1;
   transform-origin: 50% 0;
   animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
   transition: all 0.5s ease 0.3s;
-  color: #fff;
 }
 
 .loaded .initial-header {

@@ -87,7 +87,7 @@ react.renderComponent(home(), window.document.querySelector('body'));
 
 var react = require('react');
 
-var logo = "<svg class=\"player-play\" viewBox=\"0 0 64 64\">\n  <circle cx=\"32\" cy=\"32\" r=\"32\"></circle>\n  <path x=\"16\" y=\"16\" d=\"M0 0 L32 16 L0 32 z\"></path>\n</svg>\n";
+var logo = "<svg class=\"player-play\" viewBox=\"0 0 64 64\">\n  <circle cx=\"32\" cy=\"32\" r=\"32\">\n    <path x=\"16\" y=\"16\" d=\"M0 0 L32 16 L0 32 z\"></path>\n  </circle>\n</svg>\n";
 var dom = react.DOM;
 
 /**

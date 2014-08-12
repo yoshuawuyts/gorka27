@@ -12,9 +12,9 @@
   background: #f1f1f1;
 }
 
-/* TODO: remove important tag*/
-.initial-header > h1 {
-  transition: color .5s ease-out !important;
+.initial-header > a {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 
 .link-header {
@@ -44,4 +44,14 @@
   cursor: default;
   pointer-events: none;
   color: #ef6e7e;
+}
+
+.loaded .logo {
+  opacity: 1;
+  font-size: 98px;
+  color:var(--color-text-headings);
+}
+
+.loaded .initial-header > a {
+  opacity: 1;
 }

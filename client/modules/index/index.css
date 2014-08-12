@@ -2,10 +2,6 @@ body {
   background-color: var(--color-background);
 }
 
-.root-section {
-
-}
-
 .body-section {
   margin-right: auto;
   margin-left: auto;

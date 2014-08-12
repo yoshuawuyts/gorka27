@@ -50,7 +50,7 @@
 }
 
 .song:hover {
-  color: hsl(0, 0%, 60%);
+  color: var(--color-player-hover);
 }
 
 .song-name {
