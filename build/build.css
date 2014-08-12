@@ -354,7 +354,7 @@ body {
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 /**
- * Base font.
+ * Base styles.
  */
 
 html,
@@ -364,6 +364,7 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   text-decoration: none;
+  position: relative;
   color: hsla(50, 100%, 81%, 1);
 }
 
@@ -373,6 +374,35 @@ h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: hsla(50, 100%, 81%, 1);
+}
+
+/**
+ * Link styles
+ */
+
+a:after {
+  top: 68%;
+  left: 50%;
+  margin-left: -4px;
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  opacity: 0;
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  content: '';
+  text-decoration: none;
+  background-color: hsl(0, 100%, 100%);
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
 }
 
 /**
