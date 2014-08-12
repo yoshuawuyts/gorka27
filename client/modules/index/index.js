@@ -5,10 +5,10 @@
  */
 
 var react = require('react');
-var home = require('../../views/home');
+var router = require('../router/router');
 
 /**
  * Render.
  */
 
-react.renderComponent(home(), window.document.querySelector('body'));
+react.renderComponent(router(), window.document.querySelector('body'));
