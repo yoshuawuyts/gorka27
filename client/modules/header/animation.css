@@ -12,7 +12,7 @@
   transition: all .5s ease-out !important;
 }
 
-.loading .logo {
+.created .logo {
   animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
 }
 
@@ -27,15 +27,31 @@
  * Loaded
  */
 
-.loaded .logo {
+.loading .logo,
+.started .logo {
   transform-origin: 50% 0;
   animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
   transition: all 0.5s ease 0.3s;
 }
 
-.loaded .initial-header {
+.loading .initial-header,
+.started .initial-header {
   animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+  transition: all 0.5s ease 0.3s;
 }
+
+/**
+ * Started.
+ */
+
+.started .logo,
+.started .initial-header {
+  animation-duration: 0s;
+}
+
+/**
+ * Keyframes.
+ */
 
 @keyframes animLoadedLogo {
   to {

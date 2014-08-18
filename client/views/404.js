@@ -3,9 +3,11 @@
  */
 
 var react = require('react');
-var notFound = require('../modules/404/404');
 var header = require('../modules/header/header');
 var footer = require('../modules/footer/footer');
+var notFound = require('../modules/404/404');
+var store = require('../stores/store');
+var pathStore = store.loaded;
 var dom = react.DOM;
 
 /**
@@ -13,18 +15,19 @@ var dom = react.DOM;
  */
 
 module.exports = react.createClass({
-  displayName: 'home',
-  componentWillMount: componentWillMount,
+  displayName: '404',
+  getInitialState: getInitialState,
   render: render,
   componentDidMount: componentDidMount
 });
 
 /**
- * Component will mount.
+ * Get initial state.
  */
 
-function componentWillMount() {
-  this.setState({load: 'loading'});
+function getInitialState() {
+  if (!pathStore.get(0).loaded) return {load: 'created'};
+  return {load: 'started'};
 }
 
 /**
@@ -46,5 +49,9 @@ function render() {
  */
 
 function componentDidMount() {
-  setTimeout(this.setState.bind(this, {load: 'loaded'}), 1500);
+  if (!pathStore.get(0).loaded) {
+    setTimeout(this.setState.bind(this, {load: 'loading'}), 1500);
+    setTimeout(this.setState.bind(this, {load: 'started'}), 3000);
+  }
+  pathStore.update({cid: 0, loaded: true});
 }

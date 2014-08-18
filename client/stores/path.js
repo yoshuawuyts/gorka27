@@ -1,5 +1,5 @@
 /**
- * Module dependencies
+ * Module dependencies.
  */
 
 var store = require('dad');
@@ -11,7 +11,7 @@ var store = require('dad');
 var path = store('path');
 
 /**
- * Expose 'path';
+ * Expose 'path'.
  */
 
 module.exports = path;

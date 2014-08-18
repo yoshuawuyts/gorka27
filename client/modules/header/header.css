@@ -46,12 +46,15 @@
   color: #ef6e7e;
 }
 
-.loaded .logo {
+.loading .logo,
+.started .logo {
   opacity: 1;
   font-size: 98px;
   color:var(--color-text-headings);
+  transform-origin: 50% 0;
 }
 
-.loaded .initial-header > a {
+.loading .initial-header > a,
+.started .initial-header > a {
   opacity: 1;
 }
