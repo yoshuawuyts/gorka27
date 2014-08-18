@@ -2,18 +2,22 @@
  * Loaded
  */
 
-.loaded .section-playlist,
-.loaded .player-play {
+.loading .section-playlist,
+.loading .player-play,
+.started .section-playlist,
+.started .player-play {
   transform-origin: 50% 0;
   animation-delay: 3s;
   transition: all 0.25s ease 0.3s;
 }
 
-.loaded .section-playlist {
+.loading .section-playlist,
+.started .section-playlist {
   animation: animLoadedPlaylist 1s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
-.loaded .player-play {
+.loading .player-play,
+.started .player-play {
   animation: animLoadedPlayer 1s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
