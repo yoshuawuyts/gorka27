@@ -1,9 +1,9 @@
-all: build server
+all: server
 
 server:
-	httpster -p 1337&
+	httpster -p 1337
 
-build:
-	gulp&
+assets:
+	gulp
 
-.PHONY: all build server
+.PHONY: all server assets

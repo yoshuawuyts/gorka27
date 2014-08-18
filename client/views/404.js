@@ -3,8 +3,7 @@
  */
 
 var react = require('react');
-var playlist = require('../modules/player/playlist');
-var player = require('../modules/player/player');
+var notFound = require('../modules/404/404');
 var header = require('../modules/header/header');
 var footer = require('../modules/footer/footer');
 var dom = react.DOM;
@@ -36,8 +35,7 @@ function render() {
   return dom.section({className: this.state.load + ' root-section'},
     header(),
     dom.section({className: 'body-section'},
-      player(),
-      playlist(),
+      notFound(),
       footer()
     )
   );
